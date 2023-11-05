@@ -1,0 +1,274 @@
+:root {
+  --primary-color: #333; /* Dark gray */
+  --additional-color: #ffa500; /* Orange */
+  --yellow-color: #f1c40f; /* Yellow */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--primary-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: #f5f5f5; /* Light grey */
+  font-family: Arial, sans-serif; /* Default sans-serif font */
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+select main {
+  padding: 20px;
+}
+section {
+  /* margin-top: 25px; */
+  margin-bottom: 65px;
+}
+label,
+input {
+  display: block;
+  margin: 0 auto;
+}
+/* Rest of your CSS remains the same */
+
+/* Hover and Focus Styles */
+
+input:hover,
+input:focus {
+  border-color: var(--additional-color);
+  outline: none;
+}
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+button:hover,
+button:focus {
+  background-color: var(--additional-color);
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  outline: none;
+  color: var(--additional-color);
+  text-decoration: underline;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid grey;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+input::placeholder {
+  font-size: 14px;
+}
+button,
+input[type="submit"] {
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  max-width: 150px;
+  background-color: var(--yellow-color);
+}
+
+.line-100vw {
+  position: absolute;
+  top: 150%;
+  width: 100vw;
+  border: 0.2px solid grey;
+}
+
+#header {
+  width: 100vw;
+  user-select: none;
+  position: fixed;
+  background-color: rgb(231, 221, 221);
+  /* border-bottom: 1px solid gray; */
+  display: flex;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-right: 36px;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#header-img {
+  width: 300px;
+  /* margin-left: -21px; */
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+}
+
+.nav-list > li {
+  margin-left: 30px;
+}
+
+/* HERO SECTION */
+h1 {
+  visibility: hidden;
+}
+#hero {
+  padding-top: 100px;
+  text-align: center;
+}
+#email-input {
+  margin-bottom: 20px;
+}
+.hero-paragraph {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* FEATURES */
+
+i {
+  text-align: center;
+  /* height: 30px; */
+  width: 75px;
+  color: darkorange;
+}
+.features-container {
+  display: flex;
+  margin: 0 auto;
+  width: 50vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.features-list > li {
+  margin-bottom: 45px;
+}
+.feature-content {
+  max-width: 800px;
+}
+/* How is it works section */
+.how-is-it-works-section {
+  text-align: center;
+}
+h2 {
+  visibility: hidden;
+}
+iframe {
+  max-width: 600px;
+}
+
+/* price-section */
+h3 {
+  font-size: 18px;
+  padding: 15px;
+  margin-bottom: 10px;
+  background-color: rgb(247 227 170);
+}
+.price-section-list p {
+  margin-bottom: 10px;
+}
+.price-section-list b {
+  margin-left: -45px;
+  font-weight: 700;
+}
+.price-section-list span {
+  visibility: hidden;
+}
+.price-section-list button {
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.price-section-list {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+}
+.price-section-list > li {
+  border-radius: 3px;
+  margin-left: 15px;
+  border: 1px solid rgb(129, 126, 126);
+}
+.price-section-list > li:first-child {
+  margin-left: 0;
+}
+.p-grid {
+  padding: 30px;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: flex-end;
+  /* justify-content: space-around; */
+  background-color: rgb(231, 221, 221);
+}
+footer > nav > ul {
+  display: flex;
+  margin-bottom: 10px;
+}
+footer li {
+  margin-left: 15px;
+}
+footer > span {
+  color: rgb(150, 139, 139);
+  font-style: italic;
+}
+
+@media only screen and (max-width: 615px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .left {
+    margin-bottom: 30px;
+  }
+  .logo-div {
+    margin: 0 auto;
+  }
+  #header-img {
+    width: 162px;
+  }
+  iframe {
+    width: 320px;
+    height: 400px;
+  }
+  #hero {
+    margin-top: 0;
+  }
+  .nav-list {
+    display: none;
+  }
+
+  .price-section ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .price-section li {
+    max-width: 300px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  footer > nav,
+  footer > span {
+    margin: 0 auto;
+  }
+}
